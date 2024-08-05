@@ -1,0 +1,134 @@
+
+$main_color:#089da1;
+$link_color:lightseagreen;
+$scrollbar-thumb-hover: $main_color;
+$scrollbar-thumb: $link_color;
+$scrollbar-bg: #f1f1f1;
+$title_color:black;
+$p_color:#333;
+$global_padding:2em;
+$margin_bottom:2em;
+$margin_top:2em;
+
+::-webkit-scrollbar {
+    width: 10px; 
+    height: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    background: $scrollbar-bg;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb;
+    border-radius: 5px; 
+  }
+ 
+::-webkit-scrollbar-thumb:hover {
+    background: $scrollbar-thumb-hover; 
+}
+  
+%header_about_display{
+    display: flex;
+    flex-flow:row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: $global_padding;
+    height: 100vh;
+}
+
+%green_button{   
+        display: inline-block;
+        padding: 0.5em 1em;
+        background-color: $main_color;
+        color: #fff;
+        text-decoration: none;
+}
+
+%header_about_img{
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    padding: $global_padding;
+  
+    img {
+      width: 100%;
+      max-width: 100%; 
+      height: auto;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-image:url(../image/bg.png);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    @extend %header_about_display;
+}
+.intro_page{
+    flex: 1 1 50%;
+    padding: $global_padding;
+
+    h1{
+        font-size: 2.5rem;
+        color:$title_color;
+
+        span{
+            color: $link_color;
+        }
+    }
+
+    p{
+        font-size: 1rem;
+        margin-top: $margin_top;
+        margin-bottom: $margin_bottom;
+        line-height: 1.6;
+        color: $p_color;
+    }
+
+    a{
+        @extend %green_button;
+    }
+}
+.intro_img {
+    @extend %header_about_img;
+} 
+
+.about{
+    @extend %header_about_display;
+
+    .about_img{
+        @extend %header_about_img
+    }
+    .aboutUs_card{
+        flex: 1 1 50%;
+        padding: $global_padding;
+        
+        h2{
+            font-size: 2rem;
+            
+            color:$title_color;
+        }
+
+        p{
+            font-size: 1rem;
+            margin-top: $margin_top;
+            margin-bottom: $margin_bottom;
+            line-height: 1.6;
+            color: $p_color;
+        }
+    
+        a{
+            @extend %green_button;
+        }
+
+    }
+}
