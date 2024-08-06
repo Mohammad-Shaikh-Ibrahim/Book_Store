@@ -1,0 +1,296 @@
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: lightseagreen;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #089da1;
+}
+
+.about, header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2em;
+  height: 100vh;
+}
+
+.digital_book a, .about .aboutUs_card a, .intro_page a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #089da1;
+  color: #fff;
+  text-decoration: none;
+}
+
+.arrivals .arrivals_container .arrivals_item a, .featuerd_book .container .book_item a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #fff;
+  color: black;
+  text-decoration: none;
+  border: 1.5px solid #089da1;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.about .about_img, .intro_img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 2em;
+}
+.about .about_img img, .intro_img img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-image: url(../image/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.intro_page {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  padding: 2em;
+}
+.intro_page h1 {
+  font-size: 2.5rem;
+  color: black;
+}
+.intro_page h1 span {
+  color: lightseagreen;
+}
+.intro_page p {
+  font-size: 1rem;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  line-height: 1.6;
+  color: #333;
+}
+@media screen and (max-width: 480px) {
+  .about .about_img {
+    display: none;
+  }
+}
+.about .aboutUs_card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  padding: 2em;
+}
+.about .aboutUs_card h2 {
+  font-size: 2rem;
+  color: black;
+}
+.about .aboutUs_card p {
+  font-size: 1rem;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  line-height: 1.6;
+  color: #333;
+}
+.featuerd_book {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  padding: 2em;
+  margin-bottom: 3em;
+}
+.featuerd_book h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 3em;
+}
+.featuerd_book .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 2em;
+  margin-bottom: 4em;
+}
+.featuerd_book .container .book_item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  border: 1px solid rgb(150, 150, 150);
+  text-align: center;
+  margin: 2em 0.5em;
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+.featuerd_book .container .book_item img {
+  width: 8em;
+  height: 12em;
+  margin: 0.5em 2em;
+  text-align: center;
+}
+.featuerd_book .container .book_item h4 {
+  color: black;
+  margin-bottom: 0.5em;
+}
+.featuerd_book .container .book_item h6 {
+  color: #b2b2b2;
+  margin-bottom: 0.5em;
+}
+.featuerd_book .container .book_item h5 {
+  color: lightseagreen;
+  margin-bottom: 0.5em;
+  margin-left: 0.25em;
+}
+.featuerd_book .container .book_item:hover {
+  border: 1px solid #089da1;
+  -webkit-box-shadow: -2px -2px 5px #089da1, 2px -2px 5px #089da1, -2px 2px 5px #089da1, 2px 2px 5px #089da1;
+          box-shadow: -2px -2px 5px #089da1, 2px -2px 5px #089da1, -2px 2px 5px #089da1, 2px 2px 5px #089da1;
+}
+
+.arrivals {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 2em;
+  margin-bottom: 3em;
+}
+.arrivals h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 3em;
+}
+.arrivals .arrivals_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2em;
+}
+.arrivals .arrivals_container .arrivals_item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  max-width: auto;
+  border: 1px solid rgb(150, 150, 150);
+  text-align: center;
+  margin: 1em 0.5em;
+  padding: 1em;
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+.arrivals .arrivals_container .arrivals_item img {
+  width: 8em;
+  height: 12em;
+  margin: 0.5em 2em;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.arrivals .arrivals_container .arrivals_item img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.arrivals .arrivals_container .arrivals_item h5 {
+  color: black;
+  margin-bottom: 0.5em;
+}
+.arrivals .arrivals_container .arrivals_item i {
+  display: inline;
+  color: #089da1;
+  margin-bottom: 1em;
+}
+.arrivals .arrivals_container .arrivals_item:hover {
+  border: 1px solid #089da1;
+  -webkit-box-shadow: -2px -2px 5px #089da1, 2px -2px 5px #089da1, -2px 2px 5px #089da1, 2px 2px 5px #089da1;
+          box-shadow: -2px -2px 5px #089da1, 2px -2px 5px #089da1, -2px 2px 5px #089da1, 2px 2px 5px #089da1;
+}
+
+.digital_book {
+  width: 100%;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.digital_book .digital_book_img {
+  width: 100%;
+  overflow: hidden;
+}
+.digital_book .digital_book_img img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+}
+.digital_book a {
+  right: -6.5em;
+  bottom: -16em;
+  position: relative;
+}
