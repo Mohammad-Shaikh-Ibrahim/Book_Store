@@ -44,6 +44,16 @@ $margin_top:2em;
         color: #fff;
         text-decoration: none;
 }
+%white_button{   
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #fff;
+    color: $title_color;
+    text-decoration: none;
+    border: 1.5px solid $main_color ;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
 
 %header_about_img{
     flex: 1 1 50%;
@@ -66,6 +76,11 @@ $margin_top:2em;
     box-sizing: border-box;
 }
 
+body {
+    font-family:  Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+// Start Header
 header{
     background-image:url(../image/bg.png);
     background-size: cover; 
@@ -101,12 +116,17 @@ header{
 .intro_img {
     @extend %header_about_img;
 } 
-
+//Start About Us
 .about{
     @extend %header_about_display;
 
     .about_img{
         @extend %header_about_img
+    }
+    @media screen and (max-width:480px)  {
+        .about_img{
+            display: none;
+        }
     }
     .aboutUs_card{
         flex: 1 1 50%;
@@ -114,7 +134,6 @@ header{
         
         h2{
             font-size: 2rem;
-            
             color:$title_color;
         }
 
@@ -131,4 +150,157 @@ header{
         }
 
     }
+}
+// Start Featuerd Books
+.featuerd_book{
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    padding: $global_padding;
+    margin-bottom: 3em;
+    h2{ 
+        text-align: center;
+        font-size: 2rem;
+        color:$title_color;
+        margin-bottom: 3em;
+    }
+
+    .container {
+        display:flex ;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 2em;
+        margin-bottom:4em;
+
+        .book_item{
+            flex:0 0 auto;
+            border: 1px solid rgb(150, 150, 150);
+            text-align: center;
+            margin:  $margin_bottom 0.5em;
+            transition: box-shadow 0.3s ease;
+            img{
+                width: 8em;
+                height: 12em;
+                margin: 0.5em 2em ;
+                text-align: center;
+            }
+            h4{
+                color:$title_color;
+                margin-bottom: 0.5em;
+
+            }
+            h6{
+                color:#b2b2b2;
+                margin-bottom: 0.5em;
+            }
+            h5{
+                color: $link_color;
+                margin-bottom: 0.5em;
+                margin-left: 0.25em;
+            }
+            a{
+                @extend %white_button;
+              
+            }
+            &:hover{
+                border: 1px solid $main_color;
+                box-shadow: -2px -2px 5px  $main_color, 2px -2px 5px  $main_color, -2px 2px 5px  $main_color,2px 2px 5px  $main_color;
+            }
+        }
+    }
+}
+// Start Arrivals
+.arrivals {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: $global_padding;
+    margin-bottom: 3em;
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: $title_color;
+        margin-bottom: 3em;
+    }
+
+    .arrivals_container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 2em;
+
+        .arrivals_item {
+            flex: 0 0 auto; 
+            max-width: auto;
+            border: 1px solid rgb(150, 150, 150);
+            text-align: center;
+            margin:  1em 0.5em;;
+            padding: 1em;
+            transition: box-shadow 0.3s ease;
+
+            img{
+                width: 8em;
+                height: 12em;
+                margin: 0.5em 2em ;
+                text-align: center;
+                transition: transform 0.3s ease;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+
+            h5 {
+                color: $title_color;
+                margin-bottom: 0.5em;
+            }
+
+            i {
+                display: inline;
+                color: $main_color;
+                margin-bottom: 1em;
+            }
+
+            a {
+                @extend %white_button;
+            }
+            &:hover{
+                border: 1px solid $main_color;
+                box-shadow: -2px -2px 5px  $main_color, 2px -2px 5px  $main_color, -2px 2px 5px  $main_color,2px 2px 5px  $main_color;
+            }
+        }
+    }
+}
+
+// Start Digital Book
+.digital_book{
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; 
+
+    .digital_book_img {
+        width: 100%; 
+        overflow: hidden;
+        img{
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            position: absolute;
+        }
+    }
+
+    a{
+        @extend %green_button;
+        right:  -6.5em;
+        bottom: -16em;
+        position: relative;
+    }
+    // @media (max-width: 768px) {
+    //     position: relative;
+    //     left: 1em;
+    //     top: 2em;
+    // }
 }
