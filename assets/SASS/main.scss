@@ -151,8 +151,8 @@ header{
 
     }
 }
-// Start Featuerd Books
-.featuerd_book{
+// Start Featured Books
+.featured_book{
     width: 100%;
     max-width: 100%;
     height: 100vh;
@@ -200,6 +200,15 @@ header{
                 margin-bottom: 0.5em;
                 margin-left: 0.25em;
             }
+            // p{
+            //     span{
+            //         position: relative;
+            //         del{
+            //             position: absolute;
+            //             top:0.25em;
+            //         }
+            //     }
+            // }
             a{
                 @extend %white_button;
               
@@ -262,6 +271,7 @@ header{
                 display: inline;
                 color: $main_color;
                 margin-bottom: 1em;
+
             }
 
             a {
